@@ -15,26 +15,36 @@
   </head>
   <body>
     <div class="calculator">
-      <div class="display">0</div>
-      <div class="keys">
-        <button class="clear">AC</button>
-        <button class="operator">/</button>
-        <button class="operator">x</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="operator">-</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="operator">+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="equal">=</button>
-        <button class="zero">0</button>
-        <button class="operator">.</button>
+      <div class="input-row">
+        <span id="calculation"></span>
+        <input type="text" class="display" id="calculator-input" readonly />
       </div>
+      <div class="keys">
+        <button class="clear" onclick="onCleanClick()">AC</button>
+        <button class="operator" onclick="onActionClick('/')">/</button>
+        <button class="operator" onclick="onActionClick('x')">x</button>
+        <button onclick="onNumberClick(7)">7</button>
+        <button onclick="onNumberClick(8)">8</button>
+        <button onclick="onNumberClick(9)">9</button>
+        <button class="operator" onclick="onActionClick('-')">-</button>
+        <button onclick="onNumberClick(4)">4</button>
+        <button onclick="onNumberClick(5)">5</button>
+        <button onclick="onNumberClick(6)">6</button>
+        <button class="operator" onclick="onActionClick('+')">+</button>
+        <button onclick="onNumberClick(1)">1</button>
+        <button onclick="onNumberClick(2)">2</button>
+        <button onclick="onNumberClick(3)">3</button>
+        <button class="equal" onclick="onCountClick('')">=</button>
+        <button class="zero" onclick="onNumberClick(0)">0</button>
+        <button class="operator" onclick="onNumberClick('.')">.</button>
+      </div>
+      <div class="history">
+        <div class="history-btn">
+          <button id="show-history" disabled>Show history</button>
+          <button id="clear-history" class="hidden">Clear history</button>
+        </div>
+      </div>
+      <div class="history-items"></div>
     </div>
   </body>
 </html>

@@ -7,17 +7,41 @@ body {
   font-family: "Tiny5", sans-serif;
 }
 
+input {
+  font-family: "Tiny5", sans-serif;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
 .calculator {
   background-color: black;
   border-radius: 8px;
   border: 3px solid black;
 }
 
+.calculator .input-row {
+  position: relative;
+}
+
+.calculator .input-row span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 1em;
+  color: white;
+}
+
 .display {
+  background-color: black;
   color: white;
   text-align: right;
-  padding: 20px;
+  padding: 30px;
   font-size: 2rem;
+  width: 260px;
 }
 
 .keys {
@@ -58,4 +82,28 @@ button:hover {
 
 .zero {
   grid-column: span 2;
+}
+
+#show-history,
+#clear-history {
+  background-color: #a639ac;
+}
+
+.history-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-items {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+button:disabled {
+  background-color: #222;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
