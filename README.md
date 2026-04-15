@@ -32,8 +32,3 @@ Supports basic arithmetic operations with a clean and responsive UI.
 
 Practice DOM manipulation, event handling, and building interactive UI components.
 
----
-
-## Live Demo
-
-https://your-link-here.com
