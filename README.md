@@ -7,7 +7,7 @@ Supports basic arithmetic operations with a clean and responsive UI.
 
 ## Preview
 
-![Calculator Preview](./img/calculator.png)
+![Calculator Preview](./calculator.png)
 
 ---
 
